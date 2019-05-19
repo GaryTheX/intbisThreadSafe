@@ -1,0 +1,53 @@
+
+ProblemName	probDimension	numThreads	numSolution	CPU(seconds)
+Benchmark_1	  10		 1		     1		      0.16200000
+Benchmark_1	  10		 2		     1		      0.00200000
+Benchmark_1	  10		 4		     1		      0.03400000
+
+Benchmark_2	  20		 1		     1		      0.00200000
+Benchmark_2	  20		 2		     1		      0.00200000
+Benchmark_2	  20		 4		     1		      0.00300000
+
+Benchmark_3	  20		 1		     1		      0.00400000
+Benchmark_3	  20		 2		     1		      0.00300000
+Benchmark_3	  20		 4		     1		      0.00400000
+
+Benchmark_4	  10		 1		  1024		      1.50200000
+Benchmark_4	  10		 2		  1024		      0.64700000
+Benchmark_4	  10		 4		  1024		      0.33800000
+
+Economic	   4		 1		     1		      0.17200000
+Economic	   4		 2		     1		      0.10200000
+Economic	   4		 4		     1		      0.06800000
+
+Economic	   5		 1		     1		      1.99100000
+Economic	   5		 2		     1		      1.14400000
+Economic	   5		 4		     1		      0.72100000
+
+Economic	   6		 1		     2		     18.84900000
+Economic	   6		 2		     2		     10.24200000
+Economic	   6		 4		     2		      5.73100000
+
+Feigenbaum_1	   3		 1		     8		      0.00300000
+Feigenbaum_1	   3		 2		     8		      0.00200000
+Feigenbaum_1	   3		 4		     8		      0.08100000
+
+Feigenbaum_2	   5		 1		    12		      0.01600000
+Feigenbaum_2	   5		 2		    12		      0.00900000
+Feigenbaum_2	   5		 4		    12		      0.05300000
+
+Feigenbaum_3	  13		 1		   518		     10.71600000
+Feigenbaum_3	  13		 2		   518		      5.72200000
+Feigenbaum_3	  13		 4		   518		      3.13500000
+
+Chemical Eqlib	   5		 1		     1		      0.36200000
+Chemical Eqlib	   5		 2		     1		      0.26800000
+Chemical Eqlib	   5		 4		     1		      0.31800000
+
+Combustion	  10		 1		  2290		    170.67000000
+Combustion	  10		 2		  2298		     91.09200000
+Combustion	  10		 4		  2337		     50.02200000
+
+RobotKinematic	   8		 1		    16		      0.00900000
+RobotKinematic	   8		 2		    16		      0.00500000
+RobotKinematic	   8		 4		    16		      0.07200000
