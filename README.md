@@ -6,3 +6,7 @@ The difference in this repository was the use of multithreading c++ mutex to han
 During the execution of the multithreading schemes, the mutex would be applied to keep the thread safe issue.
 
 Users are welcome to modify the main function to focus on their own interested problems. While on working with their own problems, users need to create new equationset c++ classes (or modifed an existing one such as EquationSet_Robot_kinematics.cpp and hpp files.
+
+"multiReport.txt" and "multiReportSol.txt" are the output files for the build-in benchmark results. 
+
+The whole project should be running under visual studio in windows.
