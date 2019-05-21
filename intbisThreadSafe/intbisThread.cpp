@@ -33,7 +33,6 @@ void intbisThread::multiThreading(int numOfThr)
     setMutex();
     intbisPool = new aThreadPool();
     intbisPool->initialize(numOfThr);
-    //intbisPool->createObj(stack_wrk, eqSetExtr);
     }
   }
 
@@ -141,11 +140,6 @@ void intbisThread::appendItems(nativeStack *astack, EquationSet *eqSet, bool sha
         break;
       }
     }
-  }
-
-intbisThread* intbisThread::createAnObj(aThreadPool *intbisPool, bool full)
-  {
-  return intbisPool->createObj(stack_wrk, eqSetExtr, full);
   }
 
 // *****************************
@@ -261,7 +255,7 @@ void intbisThread::solve()
         stack_wrk->push(Box2);
         stack_wrk->push(pBoxExtr);
         }
-      intbisThread* aNewObjThreaded = createAnObj(intbisPool, true);
+      intbisPool->createObj(stack_wrk, eqSetExtr, true);
       }
     else
       {
@@ -277,7 +271,7 @@ void intbisThread::solve()
 
       for(i=0; i<intbisPool->poolSize(); ++i)
         {
-        if(intbisPool->athread[i]!=0)
+        if(intbisPool->athread[i]!=0) // these athreads are created be the call above "intbisPool->createObj"
           {
           threadCount++;
           if(intbisPool->athread[i]->getStatus()==WAITING)
@@ -343,7 +337,7 @@ void intbisThread::solveByThis()
           Box2 = generateBox(pBoxExtr);
           bisect(pBoxExtr, Box2);
           stack_wrk->push( Box2);
-          createAnObj(intbisPool);
+          intbisPool->createObj(stack_wrk, eqSetExtr, false);
           }
         else
           {
@@ -354,7 +348,7 @@ void intbisThread::solveByThis()
             }
           else
             {
-            createAnObj(intbisPool);
+            intbisPool->createObj(stack_wrk, eqSetExtr, false);
             if(stack_wrk->is_empty())
               setStatus(WAITING);
             else

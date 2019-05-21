@@ -26,7 +26,6 @@ class intbisThread :  public intbis
 
     void assignPoolAddress(aThreadPool *intbisPooladd){intbisPool = intbisPooladd;};
 
-    intbisThread* createAnObj(aThreadPool *intbisPool, bool full = false);
     void setID(long id){ID = id;};
     long getID(){return ID;};
     //virtual void appendItems(intBox *pBox, EquationSet *eqSet){pBoxExtr = pBox; eqSetExtr = eqSet;};
